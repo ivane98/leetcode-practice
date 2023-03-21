@@ -1,7 +1,7 @@
 //66. Plus One
 
 // var plusOne = function(digits) {
-//     const fromArray = digits.join("");
+//   const fromArray = digits.join("");
 //   const toInt = BigInt(fromArray);
 //   const addOne = toInt + 1n;
 //   const result = Array.from(String(addOne), Number);
