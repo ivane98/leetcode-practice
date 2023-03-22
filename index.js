@@ -79,3 +79,72 @@
 // };
 
 // console.log(maxProfit([7, 1, 5, 3, 6, 4]));
+
+// 136. Single Number
+
+// var singleNumber = function (nums) {
+
+// let obj = {};
+
+// for (var i = 0; i < nums.length; i++) {
+// if (!obj[nums[i]]) {
+//   obj[nums[i]] = 1;
+// } else {
+//   obj[nums[i]]++;
+// }
+
+// if (obj[nums[i]] === 1) return Number(nums[i]);
+// }
+// };
+
+// console.log(singleNumber([4, 1, 2, 1, 2]));
+
+//169. Majority Element
+
+// var majorityElement = function(nums) {
+//     let obj = {};
+//     let len = nums.length /2
+
+// for (var i = 0; i < nums.length; i++) {
+//     if (!obj[nums[i]]) {
+//       obj[nums[i]] = 1;
+//     } else {
+//       obj[nums[i]]++;
+//     }
+
+//     if (obj[nums[i]] > len) return Number(nums[i]);
+//   }
+
+// };
+
+//217. Contains Duplicate
+
+// var containsDuplicate = function (nums) {
+//   var obj = {};
+
+//   for (var i = 0; i < nums.length; i++) {
+//     if (!obj[nums[i]]) {
+//       obj[nums[i]] = 1;
+//     } else {
+//       obj[nums[i]]++;
+//     }
+
+//     if (obj[nums[i]] > 1) return true;
+//   }
+//   //const s = new Set(nums); return s.size !== nums.length
+//   return false;
+// };
+
+// console.log(containsDuplicate([2, 14, 18, 22, 22]));
+
+//268. Missing Number
+
+// var missingNumber = function (nums) {
+//   let len = nums.length;
+//   let allSum = (len * (len + 1)) / 2;
+//   let sum = nums.reduce((a, b) => a + b, 0);
+
+//   return allSum - sum;
+// };
+
+// console.log(missingNumber([3, 0, 1]));
