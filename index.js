@@ -1,6 +1,6 @@
 //141. Linked List Cycle
 
-// var hasCycle = function (head) {
+// let hasCycle = function (head) {
 //   let fast = head;
 //   let slow = head;
 
@@ -90,3 +90,75 @@
 // };
 
 // console.log(climbStairs(5));
+
+//69. Sqrt(x)
+
+// var mySqrt = function (x) {
+//   let left = 1;
+//   let right = Math.floor(x / 2) + 1;
+//   let mid;
+
+//   while (left <= right) {
+//     mid = Math.floor((left + right) / 2);
+
+//     if (mid * mid > x) {
+//       right = mid - 1;
+//     } else if (mid * mid < x) {
+//       left = mid + 1;
+//     } else {
+//       return mid;
+//     }
+//   }
+
+//   return right;
+// };
+
+// console.log(mySqrt(8));
+
+//326. Power of Three
+
+// var isPowerOfThree = function (n) {
+//   if (n == 3) {
+//     return true;
+//   }
+//   if (n < 3) {
+//     return false;
+//   }
+//   if (n == 1) {
+//     return true;
+//   }
+
+//   return isPowerOfThree(n / 3);
+// };
+
+// console.log(isPowerOfThree(1));
+
+// 101. Symmetric Tree
+
+// var isSymmetric = function (root) {
+//   function recurse(l, r) {
+//     if (!l && !r) return true;
+//     if (!l || !r || l.val !== r.val) return false;
+
+//     return recurse(l.left, r.right) && recurse(l.right, r.left);
+//   }
+//   return recurse(root.left, root.right);
+// };
+
+// 104. Maximum Depth of Binary Tree
+
+// var maxDepth = function (root) {
+//   if (!root) return 0;
+//   const queue = [root];
+//   let depth = 0;
+//   while (queue.length !== 0) {
+//     depth++;
+//     const len = queue.length;
+//     for (let i = 0; i < len; i++) {
+//       if (queue[i].left) queue.push(queue[i].left);
+//       if (queue[i].right) queue.push(queue[i].right);
+//     }
+//     queue.splice(0, len);
+//   }
+//   return depth;
+// };
