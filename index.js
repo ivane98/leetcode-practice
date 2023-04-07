@@ -162,3 +162,26 @@
 //   }
 //   return depth;
 // };
+
+//94. Binary Tree Inorder Traversal
+
+// var inorderTraversal = function(root, list = []) {
+//     if(root.left){
+//         inorderTraversal(root.left, list)
+//     }
+//     list.push(root.val)
+//     if(root.right){
+//         inorderTraversal(root.right, list)
+//     }
+
+//     return list
+// };
+
+//190. Reverse Bits
+
+// var reverseBits = function (n) {
+//   const bits = n.toString(2).padStart(32, "0").split("").reverse().join("");
+//   return parseInt(bits, 2);
+// };
+
+// console.log(reverseBits(00000010100101000001111010011100));
