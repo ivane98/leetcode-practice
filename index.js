@@ -185,3 +185,111 @@
 // };
 
 // console.log(reverseBits(00000010100101000001111010011100));
+
+// 191. Number of 1 Bits
+
+// var hammingWeight = function (n) {
+//   let count = 0;
+
+//   while (n !== 0) {
+//     let isOne = n & 1;
+
+//     if (isOne === 1) count++;
+
+//     n = n >>> 1;
+//   }
+
+//   return count;
+// };
+
+// console.log(hammingWeight(11111111111111111111111111111101));
+
+//206. Reverse Linked List
+
+// var reverseList = function (head) {
+//   let curr = head;
+//   let prev = null;
+//   let next;
+
+//   while (curr !== null) {
+//     next = curr.next;
+//     curr.next = prev;
+//     prev = curr;
+//     curr = next;
+//   }
+
+//   return prev;
+// };
+
+//234. Palindrome Linked List
+
+// let reverse = (head) => {
+//   let cur = head;
+//   let prev = null;
+//   let next;
+
+//   while (cur !== null) {
+//     next = cur.next;
+//     cur.next = prev;
+//     prev = cur;
+//     cur = next;
+//   }
+
+//   return prev;
+// };
+
+// var isPalindrome = function (head) {
+//   let fast = head;
+//   let slow = head;
+//   let startPointer = head;
+//   let len = 0;
+
+//   while (fast && fast.next) {
+//     fast = fast.next.next;
+//     slow = slow.next;
+//     len++;
+//   }
+
+//   let mid = reverse(slow);
+
+//   while (len) {
+//     len--;
+//     if (mid.val !== startPointer.val) return false;
+//     mid = mid.next;
+//     startPointer = startPointer.next;
+//   }
+//   return true;
+// };
+
+//237. Delete Node in a Linked List
+
+// var deleteNode = function(node) {
+//     let cur = node
+//     let next = cur.next
+//     cur.next = next.next
+//     cur.val = next.val
+// };
+
+// 22. Generate Parentheses
+
+// var generateParenthesis = function(n) {
+   
+//     let res = []
+
+//     let iterate = (str, open, close) =>{
+//         if(open > n || close >n || close >open) return;
+//         if(str.length == n *2 && open ==close){
+//             res.push(str)
+//             return;
+//         }
+//         iterate(str +'(',open+1,close)
+//         iterate(str + ')', open, close+1)
+        
+//     }
+
+//     iterate('',0,0)
+//     return res;
+// };
+
+
+// console.log(generateParenthesis(2))
